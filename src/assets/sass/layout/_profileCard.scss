@@ -1,0 +1,8 @@
+@import '../helpers/_variables.scss'; 
+
+.profile {
+    &__cardBox {
+        background-color: $taupe; 
+        color: white; 
+    }
+}

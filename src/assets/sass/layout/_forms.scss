@@ -1,0 +1,13 @@
+@import "../helpers/_variables.scss";
+
+.form {
+  &__p {
+    text-align: center;
+  }
+
+  &__layout {
+    margin: auto;
+    width: 60vw;
+    margin-top: 0vw;
+  }
+}

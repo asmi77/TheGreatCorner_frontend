@@ -1,0 +1,19 @@
+@import '../helpers/_variables.scss'; 
+
+.title {
+    &__h1 {
+        color:rgb(255, 255, 255); 
+        font-size: 10vh;
+        font-family: Arial, Helvetica, sans-serif
+    }
+}
+
+.avatar {
+    margin-top: 15px; 
+    margin-bottom: 30px; 
+}
+
+// .imgLogo {
+//    //
+
+// }
