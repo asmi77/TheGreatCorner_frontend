@@ -25,7 +25,7 @@
                   </v-list-tile-content>
                   <!-- More Details -->
                   <v-list-tile-action>
-                    <v-list-tile-action-text>{{item.createdDate}}</v-list-tile-action-text>
+                    <v-list-tile-action-text>{{item.createdDate|formateDate}}</v-list-tile-action-text>
                     <v-btn icon @click="getProductDetails(item._id)">
                       <v-icon color="blue-grey">visibility</v-icon>
                     </v-btn>
@@ -44,6 +44,7 @@
 
 <script>
 import http from "../helpers/http.js";
+import moment from "moment"; 
 export default {
   name: "UserProducts",
   data() {
@@ -92,6 +93,11 @@ export default {
       } else {
         this.selected.push(index);
       }
+    }, 
+  }, 
+  filter : {
+    formateDate(date) {
+      return moment(date).format("DD/MM/YYYY"); 
     }
   }
 };
