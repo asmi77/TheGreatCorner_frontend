@@ -68,7 +68,7 @@ export default {
       this.$router.push("/send-product");
     },
     fetchImage(path) {
-      if (path) return "http://localhost:8090/" + path;
+      if (path) return "https://thegreatcornerbackend.herokuapp.com/" + path;
       console.log("here is my spoon url", path);
     },
     getProductDetails(productID) {

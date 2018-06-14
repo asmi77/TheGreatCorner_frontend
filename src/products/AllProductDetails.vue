@@ -83,7 +83,7 @@ export default {
   },
   methods: {
     fetchImage(path) {
-      if (path) return "http://localhost:8090/" + path;
+      if (path) return "https://thegreatcornerbackend.herokuapp.com/" + path;
     },
     
            contactItemPoster(userID) {
