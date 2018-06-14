@@ -21,7 +21,7 @@
                     <v-list-tile-sub-title>{{ product.price }}€</v-list-tile-sub-title>
                   </v-list-tile-content>
                   <v-list-tile-action>
-                    <v-list-tile-action-text> {{ product.createdDate }}</v-list-tile-action-text>
+                    <v-list-tile-action-text> {{ product.createdDate | formateDate }}</v-list-tile-action-text>
                       <v-btn icon @click="getAllProductDetails(product._id)">
                     <v-icon color="blue-grey">visibility</v-icon>
                   </v-btn>
@@ -59,6 +59,8 @@
 import axios from "axios";
 import http from "../helpers/http.js";
 import Router from "vue-router";
+import moment from "moment"; 
+import 'moment/locale/fr';
 
 export default {
   name: "ProductsList",
@@ -148,6 +150,11 @@ export default {
       for (var i = 0; i < this.markers.length; i++) {
         this.markers[i].setMap(null);
       }
+    }
+  },
+   filters : {
+    formateDate(date) {
+      return moment(date).format("DD/MM/YYYY"); 
     }
   },
   watch: {
