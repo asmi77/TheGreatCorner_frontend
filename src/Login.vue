@@ -62,7 +62,7 @@ export default {
       console.log("Sent data inputs", logData);
       //Connect to the back
       axios
-        .post("http://localhost:8090/auth/login", logData)
+        .post("https://thegreatcornerbackend.herokuapp.com/auth/login", logData)
         //Send response object
         .then(res => {
           console.log("New user logged from vue:", res.data);

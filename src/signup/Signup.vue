@@ -59,7 +59,7 @@ export default {
             console.log("coords", newUser);
             //create new user
             axios
-              .post("http://localhost:8090/auth/create-user", newUser)
+              .post("https://thegreatcornerbackend.herokuapp.com/auth/create-user", newUser)
               .then(res => {
                 console.log("réponse du then created user : ", res);
                 console.log("New user created", res.config.data);
