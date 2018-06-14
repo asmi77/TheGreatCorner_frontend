@@ -4,8 +4,8 @@ import axios from "axios";
 import http from "../helpers/http.js";
 
 Vue.use(Vuex);
-const usersURL = "http://localhost:8090/users/list";
-const myProfileURL = "http://localhost:8090/profile";
+const usersURL = "https://thegreatcornerbackend.herokuapp.com/users/list";
+const myProfileURL = "https://thegreatcornerbackend.herokuapp.com/profile";
 
 const store = new Vuex.Store({
   state: {
